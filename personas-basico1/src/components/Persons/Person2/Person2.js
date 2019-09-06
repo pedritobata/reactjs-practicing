@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import classes from '../Person1/Person.module.css';
 import WithClass from '../../../hoc/WithClass';
 import PropTypes from 'prop-types';
+import AuthContext from '../../../context/auth-context';
 
 class Person extends React.Component{
 
@@ -11,6 +12,10 @@ class Person extends React.Component{
         this.inputRef = React.createRef();
     }
 
+    
+    /***  CONSTANTS  ***/
+
+    static contextType = AuthContext;
 
 
 
@@ -42,8 +47,9 @@ class Person extends React.Component{
 
         return (
             <div>
+                {this.context.authenticated ? <p>Authenticated!</p> : <p>Please log in!</p>}
                 <p style={this.styleDelete} onClick={this.props.borrar}>Eliminar</p>
-                <p>Hello I'm {this.props.name} and they call me {'"' + this.props.alias + '"'}</p>
+                <p>Hello I'm {this.props.name} {this.props.apellido} and they call me {'"' + this.props.alias + '"'}</p>
                 <p>{this.props.children}</p>
                 <input type="text" 
                    /* ref={element => this.inputEL = element} */

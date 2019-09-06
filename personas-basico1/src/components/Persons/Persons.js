@@ -12,6 +12,7 @@ class Persons extends React.Component{
                 <Person
                     key={index}
                     name={person.name}
+                    apellido={person.apellido}
                     alias={person.alias}
                     borrar={() => this.props.borrar(index)}
                     changed={(e)=>this.props.changed(e, person.id)}

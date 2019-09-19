@@ -3,6 +3,7 @@ import "../PersonSwitcher1/PersonSwitcher1.css";
 import Persons from '../../components/Persons/Persons';
 import Cockpit from '../../components/Cockpit/Cockpit';
 import AuthContext from '../../context/auth-context';
+import ErrorBoundary from '../../components/ErrorBoundary/ErrorBoundary';
 
 class PersonSwitcher3 extends React.Component{
 
@@ -115,22 +116,24 @@ class PersonSwitcher3 extends React.Component{
     render(){
 
         return(
-           <AuthContext.Provider value={ {authenticated:this.state.isAuthenticated, login: this.loginHandler} }>
-               <div>
-                   <header className="App-header">
-                       <h1>Personas Switch básico 3</h1>
-                   </header>
-    
-                    <Cockpit 
-                        showPersons={this.state.showPersons}
-                        personsLength={this.state.persons.length}
-                        change={this.togglePersonsHandler}
-                        changeAliases={this.changeAliasesHandler}
-                    />
-    
-                   {this.renderPersonsConditional()}
-               </div> 
-           </AuthContext.Provider>
+           <ErrorBoundary>
+               <AuthContext.Provider value={ {authenticated:this.state.isAuthenticated, login: this.loginHandler} }>
+                   <div>
+                       <header className="App-header">
+                           <h1>Personas Switch básico 3</h1>
+                       </header>
+        
+                        <Cockpit 
+                            showPersons={this.state.showPersons}
+                            personsLength={this.state.persons.length}
+                            change={this.togglePersonsHandler}
+                            changeAliases={this.changeAliasesHandler}
+                        />
+        
+                       {this.renderPersonsConditional()}
+                   </div> 
+               </AuthContext.Provider>
+           </ErrorBoundary>
         );
 
     }

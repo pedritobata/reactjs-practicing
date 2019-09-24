@@ -1,6 +1,7 @@
 import React, {useContext, useRef, useEffect} from 'react';
 import classes from './Cockpit.module.css';
 import AuthContext from '../../context/auth-context';
+import { StyleRoot } from 'radium';
 
 const Cockpit = (props) => {
 
@@ -32,6 +33,7 @@ const Cockpit = (props) => {
         //primera vez o en las actualizaciones (componentDidUpdate  o componentDidMount )
         console.log('[Cockpit.js] useEffect 1 creado');
         fillYeahMessage();
+        switchHover();
         //cuando retorno una funcion, esta se ejecutará cuando el componente se desmonte (similar componentWillUnmount)
         // y cada vez antes de ejecutar un nuevo efecto, es decir sanea los efectos anteriores
         return () => {
@@ -86,6 +88,14 @@ const Cockpit = (props) => {
         yeahRef.current.style.color = 'blue';
     }
 
+    //logica para el hover del boton login
+    const switchHover = () => {
+        if(authContext.authenticated){
+            styleLogin[':hover'] = {
+                backgroundColor : 'salmon',
+            }
+        }
+    }
 
 
 
@@ -109,6 +119,17 @@ const Cockpit = (props) => {
         toggleColor = classes['button-warning'];
     }
 
+    //Style para el hover del boton login usando radium
+    const styleLogin = {
+        ":hover" : {
+            backgroundColor : '#255cca',
+            color : '#fff'
+        }
+    }
+
+     
+
+
 
 
 
@@ -117,35 +138,38 @@ const Cockpit = (props) => {
     /***  RENDERING  ***/
 
     return (
-      <div className={classes.Cockpit}>
-          <p className={messageStyle.join(' ')}>This App is really working!!</p>
-          <p ref={yeahRef}></p>
-        
-          <button 
-             onClick={props.changeAliases} 
-          >Switch Aliases</button>
-
-          <button 
-             className={toggleColor}   
-             onClick={props.change}
-          >Toggle Persons</button>
-
-
-      {/*     <AuthContext.Consumer>
-              { context=>  <button
-                            style={btnStyle}
-                            onClick={context.login}
-                             >Log in</button>}
-          </AuthContext.Consumer>   */}
-
-          {/* Usando hooks para el contexto */}
-
-          <button
-             onClick={authContext.login}
-          >Log in</button>
-         
-
-      </div>  
+      <StyleRoot>
+          <div className={classes.Cockpit}>
+              <p className={messageStyle.join(' ')}>This App is really working!!</p>
+              <p ref={yeahRef}></p>
+            
+              <button 
+                 onClick={props.changeAliases} 
+              >Switch Aliases</button>
+    
+              <button 
+                 className={toggleColor}   
+                 onClick={props.change}
+              >Toggle Persons</button>
+    
+    
+          {/*     <AuthContext.Consumer>
+                  { context=>  <button
+                                style={btnStyle}
+                                onClick={context.login}
+                                 >Log in</button>}
+              </AuthContext.Consumer>   */}
+    
+              {/* Usando hooks para el contexto */}
+    
+              <button
+                 style={styleLogin}
+                 onClick={authContext.login}
+              >Log in</button>
+             
+    
+          </div>  
+      </StyleRoot>
     );
 
 };

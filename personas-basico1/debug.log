@@ -3,3 +3,4 @@
 [0829/153419.235:ERROR:main_dll_loader_win.cc(136)] Failed to load Chrome DLL from C:\Program Files (x86)\Hippig\Application\58.0.3029.81\chrome.dll: No se puede encontrar el módulo especificado. (0x7E)
 [0903/151631.886:ERROR:main_dll_loader_win.cc(136)] Failed to load Chrome DLL from C:\Program Files (x86)\Hippig\Application\58.0.3029.81\chrome.dll: No se puede encontrar el módulo especificado. (0x7E)
 [0905/144755.635:ERROR:main_dll_loader_win.cc(136)] Failed to load Chrome DLL from C:\Program Files (x86)\Hippig\Application\58.0.3029.81\chrome.dll: No se puede encontrar el módulo especificado. (0x7E)
+[0920/175807.975:ERROR:main_dll_loader_win.cc(136)] Failed to load Chrome DLL from C:\Program Files (x86)\Hippig\Application\58.0.3029.81\chrome.dll: No se puede encontrar el módulo especificado. (0x7E)

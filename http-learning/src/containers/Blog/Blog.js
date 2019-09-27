@@ -1,7 +1,7 @@
 import React from 'react';
 import './Blog.css';
 
-import { NavLink, Route } from 'react-router-dom';
+import { NavLink, Route , Switch, Redirect} from 'react-router-dom';
 import Posts from '../Blog/Posts/Posts';
 
 
@@ -60,8 +60,17 @@ class Blog extends React.Component {
 
                 {/* Rutas */}
 
-                <Route path="/" exact render={()=><h1>Welcome to my Home Page</h1>}/>
-                <Route path="/posts" exact component={Posts} />
+                <Switch>
+                    {}
+                    <Route path="/" exact render={()=><h1>Welcome to my Home Page</h1>}/>
+                   {/*  NO PONER exact a esta ruta posts, porque como tiene hijos
+                    el exact hace que el request ya no explore a los hijos !! */}
+                    <Route path="/posts"  component={Posts} />
+    
+                    {/* <Redirect from="/redirect" to="/posts"  /> */}
+                    <Route render={()=><h1 style={{textAlign:'center'}}>Not found!!</h1>} />
+                    
+                </Switch>
 
 
             </div>

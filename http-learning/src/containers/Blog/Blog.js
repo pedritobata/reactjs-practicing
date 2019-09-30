@@ -3,6 +3,11 @@ import './Blog.css';
 
 import { NavLink, Route , Switch, Redirect} from 'react-router-dom';
 import Posts from '../Blog/Posts/Posts';
+import asyncComponent from '../../hoc/asyncComponent';
+
+const AsyncNewPost = asyncComponent(
+  () => import('../Blog/NewPost/NewPost')
+);
 
 
 class Blog extends React.Component {
@@ -17,12 +22,14 @@ class Blog extends React.Component {
         auth: false
     }
 
+    
+
     render() {
 
-        //console.log("Ruta relativa: ",this.props.match.url);
+        //console.log("Parametro auth: ",this.state.auth);
 
         return (
-           
+            
             <div className="Blog">
                 <header>
                     <nav>
@@ -61,7 +68,7 @@ class Blog extends React.Component {
                 {/* Rutas */}
 
                 <Switch>
-                    {}
+                    {this.state.auth ? <Route path="/new-post" component={AsyncNewPost}/>: null}
                     <Route path="/" exact render={()=><h1>Welcome to my Home Page</h1>}/>
                    {/*  NO PONER exact a esta ruta posts, porque como tiene hijos
                     el exact hace que el request ya no explore a los hijos !! */}

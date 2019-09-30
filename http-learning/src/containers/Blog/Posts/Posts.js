@@ -3,7 +3,7 @@ import './Posts.css';
 import { Link , Route } from 'react-router-dom';
 import axios from '../../../services/axios';
 import Post from '../../../components/Post/Post';
-import FullPost from '../FullPost/Fullpost';
+import FullPost from '../FullPost/FullPost';
 
 class Posts extends React.Component{
 

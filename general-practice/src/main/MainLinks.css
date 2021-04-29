@@ -1,0 +1,15 @@
+.mainLinks {
+    height: 100vh;
+    background-image: linear-gradient(rgba(37, 37, 37, 0.67), rgba(37, 37, 37, .91) 85%);
+    display: grid;
+    place-items: center;
+}
+
+.mainLinks__nav {
+    height: 80vh;
+    width: 80vw;
+    background-image: linear-gradient(rgba(235, 216, 186, 0.7), rgba(19, 19, 19, .8) 70%);
+}
+
+.mainLinks__navItem {
+}

@@ -7,7 +7,7 @@ export default function MainLinks() {
         <div className="mainLinks">
             <nav className="mainLinks__nav">
                 <ul>
-                    <NavItem text="01 - Simple login & Home page" to="/simple-login"/>
+                    <NavItem text="01 - Simple login & Home page" to="/01/login"/>
                 </ul>
             </nav>
         </div>

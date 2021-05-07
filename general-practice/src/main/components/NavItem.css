@@ -1,7 +1,40 @@
 .navItem {
-
+    width: 60%;
+    height: 17%;
+    margin: 10px auto;
+    border-radius: 7px;
+    overflow: hidden;
+   box-shadow: 1px 1px 10px #525252;
+   transition: .16s ease-in;
 }
 
-.navItem > a {
+.navItem:hover {
+    transform: scale3d(1.04,1.03,1.5);
+}
+
+.navItem__link{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 7px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    background-color: rgb(29, 29, 29);
+}
+
+.navItem__link:hover {
+   /*  background-color: rgb(51, 51, 51); */
     
+}
+
+.navItem__link span:last-child{
+    font-size: 1rem;
+    color: rgb(207, 207, 206);
 }

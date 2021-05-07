@@ -1,0 +1,56 @@
+.inputField {
+    font-family: monospace;
+   
+}
+
+.inputField__container {
+    width: 100%;
+    height: 58px;
+    border: 1px solid var(--input-field-border-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    margin: 10px 0;
+}
+
+.inputField__container  span svg{
+    fill: var(--input-field-font-color);
+}
+
+.inputField__container > span{
+    display: flex;
+
+}
+
+.inputField__label {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.inputField_input {
+    flex: 1;
+    width: 100%;
+    border: 0;
+    font-size: 1.1rem;
+}
+
+.inputField_input:-webkit-autofill,
+.inputField_input:-webkit-autofill:hover,
+.inputField_input:-webkit-autofill:focus,
+.inputField_input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+.inputField_input::placeholder {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: .9rem;
+    color: var(--input-field-font-color);
+}
+
+.inputField_input:focus { 
+    outline: none;
+}

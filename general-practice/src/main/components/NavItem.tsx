@@ -5,12 +5,16 @@ import "./NavItem.css";
 type Props = {
   to: string;
   text: string;
+  description: string;
 };
 
-const NavItem: React.FC<Props> = ({ to, text }) => {
+const NavItem: React.FC<Props> = ({ to, text, description }) => {
   return (
     <li className="navItem">
-      <NavLink to={to}>{text}</NavLink>Í
+      <NavLink className="navItem__link" to={to}>
+        <span>{text}</span>
+        <span>{description}</span>
+      </NavLink>
     </li>
   );
 };

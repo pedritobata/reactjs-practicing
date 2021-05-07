@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+:root {
+  --input-field-border-color: rgb(184, 184, 204, .5);
+  --input-field-font-color: rgb(152, 152, 199);
+}
+
 body {
   margin: 0;
 }

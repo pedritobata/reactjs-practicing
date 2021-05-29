@@ -4,10 +4,10 @@
 }
 
 :root {
-  --input-field-border-color: rgb(184, 184, 204, .5);
-  --input-field-font-color: rgb(152, 152, 199);
+  --btn-primary-color: rgb(5, 180, 63);
 }
 
 body {
   margin: 0;
+  background-color: rgb(230, 230, 230);
 }

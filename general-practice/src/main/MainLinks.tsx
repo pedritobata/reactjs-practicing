@@ -11,6 +11,11 @@ export default function MainLinks() {
             to="/01/login"
             description="Login using context api"
           />
+          <NavItem
+            text="03 - Random Movie App"
+            to="/03/movies"
+            description="This is a random movie app for practicing"
+          />
         </ul>
       </nav>
     </div>

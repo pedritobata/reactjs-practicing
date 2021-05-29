@@ -1,0 +1,22 @@
+
+.btn {
+    width: 85px;
+    height: 35px;
+    font-size: 1.1rem;
+    margin-right: 10px;
+    padding: 5px 3px;
+    border-width: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.primary {
+    color: white;
+    
+    background-color: var(--btn-primary-color);
+}
+
+.outlined {
+    border: 1px solid var(--btn-primary-color);
+    color: var(--btn-primary-color);
+}

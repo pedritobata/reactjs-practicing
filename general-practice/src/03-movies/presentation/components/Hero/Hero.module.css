@@ -1,6 +1,6 @@
 .container {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 10%;
 }
 
@@ -13,6 +13,12 @@
 .info h2{
     font-size: 2.4rem;
     letter-spacing: 2px;
+}
+
+.info p{
+    font-size: .8rem;
+    line-height: 1.2;
+    width: 55vw;
 }
 
 .btnContainer {

@@ -1,0 +1,43 @@
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: .92rem;
+    font-family: inherit;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.active,
+.link:hover {
+    color: var(--btn-primary-color);
+}
+
+.logo {
+    font-size: 1.3rem;
+    flex: 1;
+}
+
+.logo:hover {
+    color: white;
+}
+

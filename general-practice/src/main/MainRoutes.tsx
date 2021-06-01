@@ -2,7 +2,7 @@ import { Switch, Route } from "react-router-dom";
 import MainLinks from './MainLinks';
 import Error404 from './404';
 import ScreensRouter01 from '../01-simple-login/screens/Router';
-import ScreensRouter02 from '../03-movies/screens/Router';
+import ScreensRouter02 from '../03-movies/presentation/screens/Router';
 
 export default function MainRoutes() {
   return (

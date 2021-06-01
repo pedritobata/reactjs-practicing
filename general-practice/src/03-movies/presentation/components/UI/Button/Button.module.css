@@ -19,4 +19,5 @@
 .outlined {
     border: 1px solid var(--btn-primary-color);
     color: var(--btn-primary-color);
+    background-color: transparent;
 }

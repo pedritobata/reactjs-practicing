@@ -7,18 +7,22 @@
 .info {
     color: white;
     line-height: 1.1;
-    
 }
 
 .info h2{
-    font-size: 2.4rem;
+    font-size: 2rem;
     letter-spacing: 2px;
+
 }
 
 .info p{
     font-size: .8rem;
     line-height: 1.2;
     width: 55vw;
+    height: 9.5vh;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .btnContainer {

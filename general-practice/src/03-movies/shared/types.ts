@@ -7,3 +7,6 @@ export type AppDispatch = typeof store.dispatch
 
 //export const useAppDispatch = () => useDispatch<AppDispatch>()
 export const useAppSelector: TypedUseSelectorHook<AppState> = useSelector
+
+//UI
+export type MovieCardSize = 'small' | 'medium' | 'large';

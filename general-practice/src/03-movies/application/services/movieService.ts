@@ -11,4 +11,10 @@ export default class MovieService {
     public getPopularMovies = async (page: number = 1): Promise<Movie[]> => {
         return await this.movieRepository.getPopular(page);
     }
+
+    public getTopRatedMovies = async (page: number = 1): Promise<Movie[]> => {
+        return await this.movieRepository.getTopRated(page);
+    }
+
+
 }

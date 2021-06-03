@@ -8,5 +8,5 @@ export const HeroStyled = styled.header<{url: string}>`
     height: 55vh;
     position: relative;
 
-    transition: all 1s ease-in-out .1s;
+    transition: all 1s ease-in-out .16s;
 `;

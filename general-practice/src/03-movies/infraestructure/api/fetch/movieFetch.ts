@@ -11,8 +11,6 @@ export default class MovieFetch implements MovieRepository {
         url.searchParams.set('api_key', MovieFetch.apiKey!);
         url.searchParams.set('language','en-US');
         url.searchParams.set('page',page.toString());
-        console.log('URL', url.href)
-        console.log('process.env', process.env.NODE_ENV)
         const response = await fetch(url.toString());
         if(!response.ok){
             throw new Error('Could not fetch popular movies.');
@@ -21,5 +19,22 @@ export default class MovieFetch implements MovieRepository {
         
         return popularMovies;
     }
+
+    public async getTopRated(page: number): Promise<Movie[]> {
+        let topRatedMovies: Movie[] = [];
+        const url = new URL(MovieFetch.baseUrl);
+        url.searchParams.set('api_key', MovieFetch.apiKey!);
+        url.searchParams.set('language','en-US');
+        url.searchParams.set('page',page.toString());
+        const response = await fetch(url.toString());
+        if(!response.ok){
+            throw new Error('Could not fetch top rated movies.');
+        }
+        topRatedMovies = await response.json(); 
+        
+        return topRatedMovies;
+    }
+
+
 
 }

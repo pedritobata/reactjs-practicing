@@ -1,0 +1,14 @@
+
+.category {
+    margin: 1rem .7rem;
+    overflow: auto;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.movies {
+    /* display: flex; */
+    
+}

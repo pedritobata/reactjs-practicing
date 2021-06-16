@@ -13,7 +13,7 @@ const Category = ({ title, movies }: Props) => {
 
   useEffect(() => {
       const cards = cardRef.current;
-      const cardWidth = cards?.children[0].getClientRects()[0].width;
+      //const cardWidth = cards?.children[0].getClientRects()[0].width;
       
   }, []);
 

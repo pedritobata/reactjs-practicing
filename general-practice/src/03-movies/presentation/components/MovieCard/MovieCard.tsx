@@ -11,11 +11,11 @@ type Props = {
 
 const MovieCard = React.forwardRef(({title, size, image}: Props, ref: React.ForwardedRef<HTMLElement>) => {
   return (
-    <article ref={ref} className={`${classes.card} ${classes[size]}`}>
+    <article ref={ref} className={classes.card}>
         <div className={classes.backdrop}></div>
       <figure className={classes.imageContainer}>
         <img
-          className={classes.image}
+          className={`${classes.image} ${classes[size]}`}
           src={`${url.movieDBImages}/${image}`}
           alt={title}
         />

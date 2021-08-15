@@ -1,0 +1,42 @@
+
+.card {
+    margin-right: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    flex: 1;
+}
+
+.small {
+    width: 30vh;
+}
+
+.backdrop {
+    background-image: linear-gradient(to bottom, rgba(0,0,0, .3) 40%, rgba(35, 1, 66, 0.8) 100%);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.image {
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.title {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    z-index: 3;
+}

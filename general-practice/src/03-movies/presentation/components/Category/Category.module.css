@@ -1,0 +1,18 @@
+
+.category {
+    margin: 1rem 0 1rem .7rem;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.movies {
+    display: flex;
+    overflow: scroll;
+   
+}
+
+.movies::-webkit-scrollbar {
+   display: none;
+}

@@ -1,0 +1,10 @@
+
+.loginForm {
+    margin: 0 auto;
+    width: 50%;
+    min-width: 350px;
+    max-width: 460px;
+    border: 1px solid var(--input-field-border-color);
+    padding: 15px;
+    color: var(--input-field-font-color);
+}

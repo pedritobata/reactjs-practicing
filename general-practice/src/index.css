@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+:root {
+  --btn-primary-color: rgb(5, 180, 63);
+}
+
 body {
   margin: 0;
+  background-color: rgb(230, 230, 230);
 }

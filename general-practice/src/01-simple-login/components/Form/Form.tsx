@@ -4,8 +4,15 @@ import {
   useState,
   useContext,
 } from "react";
-import { RouteComponentProps, withRouter, useHistory, useRouteMatch } from "react-router-dom";
+import {
+  RouteComponentProps,
+  withRouter,
+  useHistory,
+  useRouteMatch,
+} from "react-router-dom";
 import { Context01 } from "../../context/Context";
+import InputField from "../UI/InputField/InputField";
+import "./Form.css";
 
 const initialState = {
   email: "",
@@ -37,41 +44,45 @@ const Form = () => {
 
   const loginClickHandler: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
-    if (!isValidFormFields()){
-        return setFormState({
-            ...formState,
-            error: true
-        });
+    if (!isValidFormFields()) {
+      return setFormState({
+        ...formState,
+        error: true,
+      });
     }
     setState({
-        ...state,
-        user: {
-            age: 22,
-            email,
-            name: 'NN',
-            lastName: 'NN',
-            token: 'aaaassssdddd'
-        }
+      ...state,
+      user: {
+        age: 22,
+        email,
+        name: "NN",
+        lastName: "NN",
+        token: "aaaassssdddd",
+      },
     });
-    push('home');
+    push("home");
   };
 
   const isValidFormFields = () => {
-      const isFieldsNotEmpty = formState.email !== '' && formState.password !== '';
-      return isFieldsNotEmpty;
-  }
-
+    const isFieldsNotEmpty =
+      formState.email !== "" && formState.password !== "";
+    return isFieldsNotEmpty;
+  };
 
   return (
-    <form>
-      <input
-        type="text"
+    <form className="loginForm">
+      <InputField
+      isShowIcon
+        label="E-mail"
+        type="email"
         name="email"
         value={email}
         placeholder="Type username here"
         onChange={inputChangeHandler}
       />
-      <input
+      <InputField
+      isShowIcon
+        label="Password"
         type="password"
         name="password"
         value={password}

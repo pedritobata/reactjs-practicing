@@ -12,7 +12,6 @@ import MovieService from "../../../services/movieService";
 import MovieFetch from "../../../../infraestructure/api/fetch/movieFetch";
 import { fetchHomeFeed, MOVIES_HOME_FEED_FAIL } from '../actions/movieActions';
 import { HomeFeedMovies } from '../../../../shared/types';
-import { Movie } from '../../../../domain/movie';
 
 // TODO dependency inyection
 export const movieService = new MovieService(new MovieFetch());

@@ -16,6 +16,11 @@ export default function MainLinks() {
             to="/03/movies"
             description="This is a random movie app for practicing"
           />
+          <NavItem
+            text="04 - Challenges"
+            to="/04"
+            description="Challenges I found on the Internet to practice"
+          />
         </ul>
       </nav>
     </div>

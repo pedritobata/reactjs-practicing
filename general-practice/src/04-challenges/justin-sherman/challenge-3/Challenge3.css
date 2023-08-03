@@ -1,0 +1,55 @@
+.title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/******* action ****************/
+
+.action__container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.action__button {
+    border: none;
+    background-color: #4CAF50;
+    padding: 10px 15px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.action__button:hover {
+    opacity: 0.8;
+}
+
+/******* List ****************/
+
+.list__empty {
+    color: rgb(192, 5, 5);
+    font-size: 15px;
+    text-align: center;
+}
+
+
+/******* List item****************/
+
+.list__container {
+   margin: 0 40px;
+}
+
+.listItem__container {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.listItem__button {
+    margin: 0 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.listItem__details {
+    margin-left: 10px;
+}

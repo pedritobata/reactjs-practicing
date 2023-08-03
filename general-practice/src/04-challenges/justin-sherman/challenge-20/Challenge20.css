@@ -1,0 +1,27 @@
+
+/***************** main  **************/
+.title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.form__container {
+    width: 400px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.form__input {
+    padding: 10px;
+    font-size: 20px;
+}
+
+/***************** Word by Word  **************/
+
+.wbw__text {
+    text-align: center;
+    font-size: 30px;
+    margin: 20px 0;
+}

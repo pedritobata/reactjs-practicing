@@ -3,7 +3,7 @@ import { store } from "../application/store/redux/store";
 import { Movie } from '../domain/movie';
 
 
-export type AppState = ReturnType<typeof store.getState>
+export type AppState = typeof store.getState
 export type AppDispatch = typeof store.dispatch
 
 //export const useAppDispatch = () => useDispatch<AppDispatch>()

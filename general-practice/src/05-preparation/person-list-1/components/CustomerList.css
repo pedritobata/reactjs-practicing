@@ -1,0 +1,5 @@
+.CustomerList__table,
+.CustomerList__table th,
+.CustomerList__table td {
+  border: 1px solid black;
+}

@@ -21,6 +21,11 @@ export default function MainLinks() {
             to="/04"
             description="Challenges I found on the Internet to practice"
           />
+          <NavItem
+            text="05 - Preparation"
+            to="/05"
+            description="Mostly single page apps for preparation to land a new job"
+          />
         </ul>
       </nav>
     </div>
